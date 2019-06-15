@@ -4,15 +4,15 @@ usefull tools repo
 FORMAT: 1A
 HOST: http://localhost:3000/api/tools
 
-# Sample da API
+## Sample da API
 
 VUTTR - Very Usefull Tools to Remember
 
 Aplicação para gerenciar ferramentas importantes para o desenvolvimento em javascript.
 
-# Listar 
+## Listar 
 
-## Ferramentas [/tools]
+### Ferramentas [/tools]
 
 ### Listar ferramentas [GET]
 
@@ -25,9 +25,9 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Response 200 (application/json)
 
 
-# Filtrar 
+## Filtrar 
 
-## Ferramentas [http://localhost:3000/api?tag=node]
+### Ferramentas [http://localhost:3000/api?tag=node]
 
     + Parameters 
         + tag: (string, required) - tag name
@@ -43,9 +43,9 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Response 200 (application/json)
 
 
-# Cadastrar 
+## Cadastrar 
 
-## Ferramentas [/tools]
+### Ferramentas [/tools]
 
     + Parameters 
         + tool: (json, required) - json object
@@ -61,9 +61,9 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Response 200 (application/json)
 
 
-# Deletar 
+## Deletar 
 
-## Ferramentas [/tools/id]
+### Ferramentas [/tools/id]
 
     + Parameters 
         + id: (hash, required) - _id
