@@ -6,7 +6,7 @@ usefull tools repo
 + npm install
 + npm run dev
 
-Executar o comando npm install para instalar as dependências de desenvolvimento.
+Executar o comando npm install para instalar as dependências de desenvolvimento. \n
 Executar o comando npm run dev para definir script personalizado.
 
 Observações: Com a ferramenta insomnia instalada, a compreensão do request e response são mais fáceis.
