@@ -2,7 +2,7 @@
 usefull tools repo
 
 FORMAT: 1A
-HOST: "http://localhost:3000/api/tools"
+HOST: http://localhost:3000/api/tools
 
 ## Sample da API
 
