@@ -15,8 +15,8 @@ module.exports = {
     },
 
     // consulta coleção por tag
-    async show(req, res) {
-        await Tool.find({ queryParam: req.query.tags }).then((result) => {
+    show(req, res) {
+        Tool.find({ queryParam: req.query.tags }).then((result) => {
             const {tag} = req.query;
             const resultado = result.filter( (currElement, index) => {
                 return currElement.tags.includes(tag);
