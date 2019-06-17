@@ -64,6 +64,15 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 
     + Parameters 
         + tool: (json, required) - json object
+        + example:
+        ```
+        {
+            "title": "BossaBox",
+            "link": "https://bossabox.com",
+            "description": "A BossaBox é a primeira startup na América Latina a se propor a resolver o problema de        desenvolvimento de produtos digitais.",
+            "tags":["desenvolvedores", "prolancer", "backend", "dev", "javascript", "remoto", "hire"]
+        }
+        ```
 
 ### Cadastro de uma nova ferramenta [POST]
 
