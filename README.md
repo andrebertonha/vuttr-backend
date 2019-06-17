@@ -42,7 +42,7 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 
 ## Filtrar 
 
-### Filtrar Ferramentas [http://localhost:3000/api?tag=node]
+### Ferramentas [http://localhost:3000/api?tag=node]
 
     + Parameters 
         + tag: (string, required) - tag name
