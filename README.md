@@ -10,6 +10,12 @@ usefull tools repo
 
 Observações: Com a ferramenta insomnia instalada, a compreensão do request e response são mais fáceis.
 
++ Insomnia
+    + Definir método, body e url
+    
+    
+### Listar ferramentas [GET]
+
 FORMAT: 1A
 HOST: http://localhost:3000/api/tools
 
@@ -36,7 +42,7 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 
 ## Filtrar 
 
-### Ferramentas [http://localhost:3000/api?tag=node]
+### Filtrar Ferramentas [http://localhost:3000/api?tag=node]
 
     + Parameters 
         + tag: (string, required) - tag name
