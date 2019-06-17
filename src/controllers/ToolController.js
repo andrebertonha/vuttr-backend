@@ -12,13 +12,13 @@ module.exports = {
     async store(req, res) {
         const tool = await Tool.create(req.body);
         return res.json(tool);
-    },    
+    },
 
     // consulta coleção por tag
-    show(req, res) {
-        Tool.find({ queryParam: req.query.tags }).then((result) => {
+    async show(req, res) {
+        await Tool.find({ queryParam: req.query.tags }).then((result) => {
             const {tag} = req.query;
-            const resultado = result.filter( (currElement, index) => {                
+            const resultado = result.filter( (currElement, index) => {
                 return currElement.tags.includes(tag);
             });
             res.json(resultado);
@@ -31,7 +31,7 @@ module.exports = {
     async destroy(req, res) {
         await Tool.findByIdAndRemove(req.params.id);
         return res.send();
-    },    
+    },
 };
 
 

@@ -1,6 +1,5 @@
 const express = require('express');
 const routes = express.Router();
-
 const ToolController = require('./controllers/ToolController');
 
 //rota para listar as ferramentas cadastradas
