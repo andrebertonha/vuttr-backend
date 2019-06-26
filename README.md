@@ -14,7 +14,6 @@ Observações: Com a ferramenta insomnia instalada, a compreensão do request e 
     + Definir método, body e url
 
 
-FORMAT: 1A
 HOST: http://localhost:3000/api/tools
 
 ## Sample da API
@@ -23,11 +22,8 @@ VUTTR - Very Usefull Tools to Remember
 
 Aplicação para gerenciar ferramentas importantes para o desenvolvimento em javascript.
 
-## Listar 
 
-### Ferramentas [/tools]
-
-### Listar ferramentas [GET]
+### Listar ferramentas [GET]  [/tools]
 
 + Request Listar ferramentas
 
@@ -38,41 +34,33 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Response 200 (application/json)
 
 
-## Filtrar 
+### Filtrar ferramenta [GET]
 
-### Ferramentas [http://localhost:3000/api?tag=node]
+<p> url de exemplo: [http://localhost:3000/api?tag=node] </p>
 
-    + Parameters 
-        + tag: (string, required) - tag name
-
-### Filtrar ferramentas com busca por tag [GET]
++ Parameters 
+    + tag: (string, required) - tag name
 
 + Request Filtrar ferramentas
-
     + Headers
         Accept: 
         Content-Type: application/json
 
 + Response 200 (application/json)
 
-
-## Cadastrar 
-
-### Ferramentas [/tools]
+### Cadastrar Ferramentas [POST] [/tools]
 
     + Parameters 
         + tool: (json, required) - json object
         + example:
-        
+        ```
         {
             "title": "BossaBox",
             "link": "https://bossabox.com",
             "description": "A BossaBox é a primeira startup na América Latina a se propor a resolver o problema de        desenvolvimento de produtos digitais.",
             "tags":["desenvolvedores", "prolancer", "backend", "dev", "javascript", "remoto"]
         }
-        
-
-### Cadastro de uma nova ferramenta [POST]
+        ```
 
 + Request Cadastrar ferramenta
 
@@ -83,14 +71,10 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Response 200 (application/json)
 
 
-## Deletar 
-
-### Ferramentas [/tools/id]
+### Deletar ferramenta [DELETE] [/tools/:id]
 
     + Parameters 
         + id: (hash, required) - _id
-
-### Deletar uma ferramenta [DELETE]
 
 + Request Deletar ferramentas
 
@@ -99,8 +83,3 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
         Content-Type: application/json
 
 + Response 204 (application/json)
-    
-
-
-
-
