@@ -26,7 +26,6 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 ### Listar ferramentas [GET]  [/tools]
 
 + Request Listar ferramentas
-
     + Headers
         Accept: 
         Content-Type: application/json
@@ -48,23 +47,22 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 
 + Response 200 (application/json)
 
-### Cadastrar Ferramentas [POST] [/tools]
+### Cadastrar Ferramenta [POST] [/tools]
 
 + Parameters 
     + tool: (json, required) - json object
     + example:
 
-```javascript
-{
-    "title": "Vue",
-    "link": "https://vuejs.org/",
-    "description": "Progressive JavaScript Framework",
-    "tags":["approachable", "versatile", "frontend", "dev", "javascript", "performant"]
-}
-```
+    ```javascript
+    {
+        "title": "Vue",
+        "link": "https://vuejs.org/",
+        "description": "Progressive JavaScript Framework",
+        "tags":["approachable", "versatile", "frontend", "dev", "javascript", "performant"]
+    }
+    ```
 
 + Request Cadastrar ferramenta
-
     + Headers
         Accept: application/json
         Content-Type: application/json
@@ -77,10 +75,5 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Parameters 
     + id: (hash, required) - _id
 
-+ Request Deletar ferramentas
-
-    + Headers
-        Accept: 
-        Content-Type: application/json
-
++ Request Deletar ferramenta
 + Response 204 (application/json)
