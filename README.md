@@ -50,17 +50,18 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 
 ### Cadastrar Ferramentas [POST] [/tools]
 
-    + Parameters 
-        + tool: (json, required) - json object
-        + example:
-        ```javascript
-        {
-            "title": "Vue",
-            "link": "https://vuejs.org/",
-            "description": "Progressive JavaScript Framework",
-            "tags":["approachable", "versatile", "frontend", "dev", "javascript", "performant"]
-        }
-        ```
++ Parameters 
+    + tool: (json, required) - json object
+    + example:
+
+```javascript
+{
+    "title": "Vue",
+    "link": "https://vuejs.org/",
+    "description": "Progressive JavaScript Framework",
+    "tags":["approachable", "versatile", "frontend", "dev", "javascript", "performant"]
+}
+```
 
 + Request Cadastrar ferramenta
 
