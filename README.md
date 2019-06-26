@@ -74,8 +74,8 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 
 ### Deletar ferramenta [DELETE] [/tools/:id]
 
-    + Parameters 
-        + id: (hash, required) - _id
++ Parameters 
+    + id: (hash, required) - _id
 
 + Request Deletar ferramentas
 
