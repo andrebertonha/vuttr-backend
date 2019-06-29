@@ -15,17 +15,28 @@ module.exports = {
     },
 
     // consulta coleção por tag
-    show(req, res) {
-        Tool.find({ queryParam: req.query.tags }).then((result) => {
-            const {tag} = req.query;
-            const resultado = result.filter( (currElement, index) => {
+    /* async show(req, res) {        
+        await Tool.find({ tag: req.params.tags }).then((result) => {
+            let {tag} = req.query;
+            const resultado = result.filter( (currElement) => {
                 return currElement.tags.includes(tag);
             });
             res.json(resultado);
         }, (err) => {
             res.status(500).json({error: err});
         });
+    }, */
+
+    async show(req, res) {
+        const query = req.query
+        console.log(query)
+        await Tool.find(query)
+            .then(tools => { 
+                res.json({ data: tools })
+            })
     },
+
+   
 
     //remover uma ferramenta por id
     async destroy(req, res) {
