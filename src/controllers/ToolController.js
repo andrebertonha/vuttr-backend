@@ -13,8 +13,7 @@ module.exports = {
         const tool = await Tool.create(req.body);
         return res.json(tool);
     },
-
-    // consulta coleção por tag
+    
     /* async show(req, res) {        
         await Tool.find({ tag: req.params.tags }).then((result) => {
             let {tag} = req.query;
@@ -27,6 +26,7 @@ module.exports = {
         });
     }, */
 
+    // consulta coleção por tag
     async show(req, res) {
         const query = req.query
         console.log(query)
@@ -34,9 +34,7 @@ module.exports = {
             .then(tools => { 
                 res.json({ data: tools })
             })
-    },
-
-   
+    },   
 
     //remover uma ferramenta por id
     async destroy(req, res) {
