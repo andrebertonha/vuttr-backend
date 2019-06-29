@@ -10,7 +10,10 @@ usefull tools repo
 
 Observações: Com a ferramenta insomnia instalada, a compreensão do request e response são mais fáceis.
 
-FORMAT: 1A
++ Insomnia
+    + Definir método, body e url
+
+
 HOST: http://localhost:3000/api/tools
 
 ## Sample da API
@@ -19,14 +22,10 @@ VUTTR - Very Usefull Tools to Remember
 
 Aplicação para gerenciar ferramentas importantes para o desenvolvimento em javascript.
 
-## Listar 
 
-### Ferramentas [/tools]
-
-### Listar ferramentas [GET]
+### Listar ferramentas [GET]  [/tools]
 
 + Request Listar ferramentas
-
     + Headers
         Accept: 
         Content-Type: application/json
@@ -34,35 +33,36 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Response 200 (application/json)
 
 
-## Filtrar 
+### Filtrar ferramenta [GET]
 
-### Ferramentas [http://localhost:3000/api?tag=node]
+<p> url de exemplo: [http://localhost:3000/api?tag=node] </p>
 
-    + Parameters 
-        + tag: (string, required) - tag name
-
-### Filtrar ferramentas com busca por tag [GET]
++ Parameters 
+    + tag: (string, required) - tag name
 
 + Request Filtrar ferramentas
-
     + Headers
         Accept: 
         Content-Type: application/json
 
 + Response 200 (application/json)
 
+### Cadastrar Ferramenta [POST] [/tools]
 
-## Cadastrar 
++ Parameters 
+    + tool: (json, required) - json object
+    + example:
 
-### Ferramentas [/tools]
-
-    + Parameters 
-        + tool: (json, required) - json object
-
-### Cadastro de uma nova ferramenta [POST]
+    ```javascript
+    {
+        "title": "Vue",
+        "link": "https://vuejs.org/",
+        "description": "Progressive JavaScript Framework",
+        "tags":["approachable", "versatile", "frontend", "dev", "javascript", "performant"]
+    }
+    ```
 
 + Request Cadastrar ferramenta
-
     + Headers
         Accept: application/json
         Content-Type: application/json
@@ -70,24 +70,10 @@ Aplicação para gerenciar ferramentas importantes para o desenvolvimento em jav
 + Response 200 (application/json)
 
 
-## Deletar 
+### Deletar ferramenta [DELETE] [/tools/:id]
 
-### Ferramentas [/tools/id]
++ Parameters 
+    + id: (hash, required) - _id
 
-    + Parameters 
-        + id: (hash, required) - _id
-
-### Deletar uma ferramenta [DELETE]
-
-+ Request Deletar ferramentas
-
-    + Headers
-        Accept: 
-        Content-Type: application/json
-
++ Request Deletar ferramenta
 + Response 204 (application/json)
-    
-
-
-
-
