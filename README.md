@@ -3,6 +3,7 @@ usefull tools repo
 
 ### Instruções
 
++ Clonar este repositório
 + npm install
     + Executar o comando npm install para instalar as dependências de desenvolvimento.
 + npm run dev
