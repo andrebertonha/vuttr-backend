@@ -1,20 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
-//const cors = require('cors');
+require('dotenv').config()
 
 // iniciar app
 const app = express();
 app.use(express.json());
 
-//app.use(cors());
-
-mongoose.connect(
-  'mongodb+srv://andrebertonha:andre@cluster0-kflaj.mongodb.net/vuttr?retryWrites=true&w=majority',
-  { useMongoClient: true }
-);
-
-//mongoose.connect('mongodb://localhost:27017/vuttrapi', { useNewUrlParser: true })
+try {
+  mongoose.connect(process.env.MADB_URI, {useNewUrlParser: true});
+}catch(e){ console.log(e.error) }
 
 requireDir('./src/models');
 
