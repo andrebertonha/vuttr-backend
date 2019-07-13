@@ -9,13 +9,13 @@ module.exports = {
     },
 
     //cadastrar nova ferramenta
-    async store(req, res) {
+    async store(req, res) {        
         const tool = await Tool.create(req.body);
         return res.json(tool);
     },
 
     // consulta coleção por tag
-    async show(req, res) {
+    async show(req, res) {        
         const tool = await Tool.find({tags: req.query.tag});
         return res.json(tool);
     },
